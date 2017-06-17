@@ -1,0 +1,588 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*//Fonts//	*/
+	/*font-family: 'Great Vibes', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	font-family: 'Average', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Great Vibes', cursive;
+
+*** menu typeface is Palatino Linotype. please sub with:
+	font-family: 'GFS Didot', serif;
+*/
+
+/*Colours: 
+
+orange: #cc5010
+darkgrey: #24292d
+beige: #ebe5d7
+*/
+
+
+/*/// TYPOGRAPHY ///*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #24292d;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'Great Vibes', cursive;
+	color: #cc5010;
+	font-size: 60px;	
+	font-weight: normal;
+}
+
+h2 {
+	font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 45px;
+	color: #cc5010;
+	text-align: center;
+}
+
+h3 {
+	font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-weight: 400;
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+/*///Colour for the h1///*/
+span.color_grey {
+	color: #24292d;
+}
+
+span.color_white {
+	color: #ffffff;
+}
+
+p.sub_head1 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: 19px;
+	color: #24292d;
+}
+
+p.sub_head2 {
+	font-size: 19px;
+	font-style: italic;
+	color: #ffffff;
+}
+
+p.title {
+	font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-size: 22px;
+	text-transform: capitalize;
+	text-align: center;
+	color: #ffffff;
+}
+p.caption {
+	font-size: 11px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: -15px;
+}
+
+
+/*/// Section 1: HEADER ///*/
+
+header {
+	background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_title {
+	padding-top: 40px;
+	padding-bottom: 0px;
+}
+
+.button {
+	background-color: rgba(225,86, 14, 0.8);
+	padding: 15px;
+	width: 210px;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.button a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.button img.icon {
+
+}
+
+.button:hover {
+	background-color: rgba(210, 80, 13, 0.4);
+}
+
+/*/// Section 2: HIDDEN MENU ///*/
+
+.nav_icon {
+	position: absolute;
+	left: 35px;
+	top: 40px;
+	background-color: rgba(36, 41, 45, 0.5);
+	cursor:pointer;
+}
+
+.nav_container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(36, 41, 45, 0.8);
+	max-width: 200px;
+/*	display: none;
+*/}
+
+.nav_icon:hover .nav_container {
+	display: block;
+}
+
+.logo {
+	margin: 20px 0px 0px 25px;
+}
+
+hr.style {
+	border: 0;
+    height: 1px;
+    width: 160px;
+	background: #798c9a;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.navigation ul {
+	margin: 20px 0 0 10px;
+	list-style-type: none;
+	color: #798c9a;
+	font-size: 12px;
+	line-height: 26px;
+}
+
+.navigation ul a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #798c9a;
+	padding-left: 5px;
+}
+
+.navigation li {
+	margin-bottom: 10px;
+}
+
+ul i .fa {
+		color: #798c9a;
+		position: relative;
+		height: 15px;
+		top: 3px;
+		left: 10px;
+}
+
+.navigation ul :hover, .social_media a:hover{
+	color: #ffffff;
+}
+
+.twitter {
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	color: #798c9a;
+	padding: 0px 22px 0px 22px;
+}
+
+.twitter .fa-twitter {
+	font-size: 30px;
+	color: #cc5010;
+	display: block;
+	text-align: center;
+	margin: -5px;
+}
+
+.twitter a {
+	color: #cc5010;
+	text-decoration: none;
+} 
+
+a.portfolio_link {
+	color: #ffffff;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+}
+
+p.time {
+	text-transform: uppercase;
+	font-size: 11px;
+	margin: -10px; 
+}
+
+.social_media {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: -20px;
+}
+
+.social_media a {
+	color: #798c9a;
+	text-decoration: none;
+	font-size: 20px;
+	margin: 10px;
+}
+
+p.legal {
+	color: #798c9a;
+	font-size: 10px;
+	text-transform: capitalize;
+	text-align: center;
+	margin: 5px 40px 20px 40px;
+}
+
+
+/*/// Section 3: ABOUT OUR CHEFS ///*/
+
+.about {
+	background-color:#ebe5d7;
+	margin-top: -11px;
+	display: flex;
+	}
+
+.about_content {
+	margin: 10px 10px 30px 150px;
+}
+
+.chef_icon {
+	float: left;
+	margin-right: 15px;
+	border-radius: 50%;
+	max-width: 20%;
+}
+
+.bio {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.bio h2 {
+	margin: 0px;
+	color: #24292d;
+}
+.chef_title {
+	color: #cc5010;
+	margin: 0px 0px 30px 0px;
+}
+
+.arrows a {
+	color: #798c9a;
+	font-size: 35px;
+	text-decoration: none;
+}
+
+.arrows a:hover {
+	color: #cc5010;
+}
+
+
+/*// I just can't figure this one out. The image gets all skewed //*/
+img.chef {
+	max-width: 100%;
+	height: auto;
+	padding: -20px;
+}
+
+
+/*/// Section 4: GALLERY ///*/
+
+.gallery {
+	text-align: center;
+}
+
+.gallery .sub_head2 {
+	max-width: 60%;
+	text-align: center;
+	margin: 50px auto;
+}
+
+/*/// Gallery Navigation ///
+*/.nav_gallery {
+	max-height: 80px;
+}
+
+.nav_gallery ul {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: flex-start;	
+	list-style-type: none;
+	max-width: 60%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	border: 1px solid #798c9a;
+	box-sizing: border-box;
+	padding: 10px;
+	line-height: 10px;
+	background-color: #292D33;
+	color: #798c9a;
+}
+
+.nav_gallery ul a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 11px;
+}
+
+.nav_gallery ul a:hover {
+	color: #cc5010;
+}
+
+/*/// Image Gallert ///*/
+
+.gallery_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.gallery_item {
+	margin: -10px 0px 0px 0px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	padding: 25px;
+	display: none;
+}
+
+.gallery_item:hover .overlay {
+	display: block;
+}
+
+
+
+/*/// Section 5: OUR SERVICES ///	*/
+
+.services {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: -10px;
+}
+
+.services .sub_head1 {
+	max-width: 60%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.service_items h2 {
+		margin-bottom: -5px;
+}
+
+.meal {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items:flex-start;
+	align-items: baseline;
+	max-width: 75%;
+	padding: 0px -10px 0px 0px;
+}
+
+.service_items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 0px 20px 50px 20px;
+}
+
+
+/*/// Section 6: MEUN ///*/
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	background-image: url(images/menu_background.jpg);
+	background-repeat: no-repeat;
+
+}
+
+.menu .arrows {
+	position: absolute;
+	top: 50px;
+	right: 70px;
+
+}
+
+.food_menu {
+	display: inline-block;
+	padding-left: 100px;
+}
+
+.menu_item {
+	font-family: "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-weight: 400;
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: capitalize;
+	list-style-type: none;
+}
+
+li.description {
+	color: #ffffff;
+	text-align: left;	
+	list-style-type: none;
+	padding-bottom: 15px;
+}
+
+span.price {
+	font-style: italic;
+	float: right;
+	padding-left: 50px;
+}
+
+.menu .button {
+	margin-bottom: 45px;
+	margin-left:40%;
+}
+
+
+/*/// Section 7: CONTACT US w FORM ///*/
+
+.contact_us {
+	background-image: url(assets/map.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+form h1 {
+	margin: 0 auto;
+}
+
+form {
+	background-color: #ffffff;
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 375px;
+	padding: 15px;
+}
+
+/*<!-- Form elements -->*/
+input[type=name], input[type=email] {
+	padding: 10px 5px 10px 5px;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: 2px;
+	border: 1px solid #c4c4c4;
+	background-repeat: no-repeat;
+	background-position: 97% center;
+	background-size: 24px;
+}
+
+input[type=name] {
+	margin-bottom: 6px;
+	background-image:url(assets/);
+}
+
+input[type=email] {
+	margin-bottom: 12px;
+	background-image:url(assets/mail.png);
+}
+
+textarea {
+	margin-bottom: 12px;
+}
+
+input [type=submit] {
+	display: block;
+	border-radius: 2px;
+}
+
+/*/// Section 8: FOOTER ///*/
+
+footer {
+	margin-top: -220px;
+}
+
+.footer_logo {
+	margin-left: 150px;
+}
+
+footer .social_media {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+.contact_info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-top: -200px;
+}
+
+.contact_info p {
+	line-height: 5px;
+	color: #798c9a;
+	font-size: 13px;
+	margin-right: 100px;
+	vertical-align: top;
+}
